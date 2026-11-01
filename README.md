@@ -8,7 +8,6 @@ O projeto usa Cypress e JavaScript. Os casos automatizados são CT01, CT02, CT03
 
 - `cypress/e2e/`: specs dos casos de teste.
 - `cypress/modules/`: módulos organizados por funcionalidade.
-- `cypress/fixtures/`: dados de teste.
 - `cypress/support/`: configuração de suporte do Cypress.
 
 ## Instalação e execução
@@ -31,4 +30,10 @@ Abra a interface do Cypress:
 npm run cy:open
 ```
 
-O relatório HTML é gerado em `cypress/reports/html/index.html` após a execução da suíte.
+O relatório HTML local é gerado em `cypress/reports/html/index.html`.
+
+## Integração contínua
+
+O GitHub Actions executa os testes automaticamente em cada push para `main` e permite execução manual. A pipeline utiliza Node.js 22.
+
+O relatório HTML fica disponível no artefato `relatorio-mochawesome` da execução.
